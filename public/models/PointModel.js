@@ -2,7 +2,7 @@ var PointModel = Backbone.Model.extend({
 
     defaults: {
         x: getRandomInt(0,60), 
-        y: getRandomInt(0,60),
+        y: getRandomInt(0,45),
         color: "#FF0000"
     },
 
