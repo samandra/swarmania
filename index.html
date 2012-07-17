@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Swarmania</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+<!--    <link rel="stylesheet" href="http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css">-->
+<!--    <link href='http://fonts.googleapis.com/css?family=Chelsea+Market' rel='stylesheet' type='text/css'>-->
+<!--    <link href='http://fonts.googleapis.com/css?family=Handlee' rel='stylesheet' type='text/css'>-->
+<!--        <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>-->
+        
+        <script src="/lib/underscore.js"></script>
+        <script src="/lib/underscore.string.js"></script>
+        <script src="/lib/jquery.js"></script>
+        <script src="/lib/backbone-min.js"></script>
+        <script src="/lib/init.js"></script>
+        
+        <script src="http://192.168.1.164:8091/socket.io/socket.io.js"></script>
+        
+        <script type="text/javascript">
+            var socket = io.connect('http://192.168.1.164:8091');
+        </script>
+        
+    <style type="text/css">
+            * {
+                padding: 0;
+                margin: 0;
+            }
+            
+            body {
+                font-family: "lucida sans", verdana, arial, helvetica, sans-serif;
+                font-size: 75%;
+            }
+            
+            h1 {
+                font-size: 1.4em;
+                padding: 10px 10px 0;
+            }
+            
+            p{
+                padding: 0 10px 1em;
+            }
+            
+            html, body {
+                height: 100%;
+            }
+            
+            #container {
+                min-height: 90%;
+                background-color: #FFF;
+                width: 1140px;
+                margin: 0 auto;
+                position:relative;
+                border: 1px solid blue;
+            }
+            
+            #header{
+                width: 100%;
+                min-height: 6%;
+                background-color: #000;
+                width: 100%;
+            }
+            
+            #header-content{
+                margin: 0 auto;
+                width: 80%;
+            }
+
+            .canvas {
+                border: 1px solid #a3e4fc;
+            }
+    </style>
+  </head>
+
+  <body>
+
+    <div id="container">
+        Swarmania starts here!!
+
+        <div id="canvasContainer">
+            
+
+        </div>
+    </div>
+
+    
+    <script src="models/PointModel.js"></script>
+    <script src="collections/PointsCollection.js"></script>
+
+    <script src="views/CanvasView.js"></script>
+    <script src="app/app.js"></script>
+
+    <script src="lib/socketIO.js"></script> 
+
+  </body>
+</html>
+
