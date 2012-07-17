@@ -61,6 +61,8 @@ io.sockets.on('connection', function (socket) {
     socket.on("disconnect", function(){
         console.log("socket ith id: ", socket.id, " disconnected");
         PointsCollection.remove(socket.id);
+
+        socket.broadcast.emit("user_left", PointsCollection.models);
     });
 
     // socket.on("user_joined", function(){

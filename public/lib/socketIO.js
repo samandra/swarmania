@@ -76,3 +76,23 @@ socket.on("user_moved", function(d){
     pointsCollection.add(pointModel);
 });
 
+socket.on("user_left", function(d){
+    console.log("user left",d);
+
+    var i = pointModel.id;
+    delete d[i];
+
+    console.log("others");
+    var points = [];
+    _.each(d, function(value, key){
+        
+        points.push(value);
+        value.color = "#000000";
+    });
+
+    console.log("coll", pointsCollection.models);
+
+    pointsCollection.reset(points);
+    pointsCollection.add(pointModel);
+});
+
