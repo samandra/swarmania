@@ -11,13 +11,13 @@ var CanvasView = Backbone.View.extend({
         var canvasHeight = h-h%16;
         var canvas = false;
         
-        this.canvasHeight = 960;
+        this.canvasHeight = 720;
         this.canvasWidth = 960;
 
         this.gridHeight = this.canvasHeight/16;
         this.gridWidth = this.canvasWidth/16;
 
-        this.canvas = canvas = $('<canvas class="canvas" id="playGround" width=960 height='+960+'><canvas/>');
+        this.canvas = canvas = $('<canvas class="canvas" id="playGround" width=960 height='+720+'><canvas/>');
         $(this.el).append(canvas);
 
         //get 2d context
@@ -47,7 +47,7 @@ var CanvasView = Backbone.View.extend({
                     }
                     break;
                 case 83:
-                    if(window.pointModel.get("y")<59){
+                    if(window.pointModel.get("y")<44){
                         window.pointModel.set("y", window.pointModel.get("y")+1);
                     }
                     break;
@@ -116,7 +116,7 @@ var CanvasView = Backbone.View.extend({
     },
 
     clear: function(){
-        this.ctx.clearRect(0, 0, this.canvasHeight , this.canvasHeight);
+        this.ctx.clearRect(0, 0, this.canvasWidth , this.canvasHeight);
     }
 
 
