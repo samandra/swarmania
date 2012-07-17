@@ -31,17 +31,25 @@ var CanvasView = Backbone.View.extend({
 
         $(window).keydown(function(e){
             switch(e.keyCode){
-                case 37:
-                    window.pointModel.set("x", window.pointModel.get("x")-1);
+                case 65:
+                    if(window.pointModel.get("x")>0){
+                        window.pointModel.set("x", window.pointModel.get("x")-1);
+                    }
                     break;
-                case 38:
-                    window.pointModel.set("y", window.pointModel.get("y")-1);
+                case 87:
+                    if(window.pointModel.get("y")>0){
+                        window.pointModel.set("y", window.pointModel.get("y")-1);
+                    }
                     break;
-                case 39:
-                    window.pointModel.set("x", window.pointModel.get("x")+1);
+                case 68:
+                    if(window.pointModel.get("x")<59){
+                        window.pointModel.set("x", window.pointModel.get("x")+1);
+                    }
                     break;
-                case 40:
-                    window.pointModel.set("y", window.pointModel.get("y")+1);
+                case 83:
+                    if(window.pointModel.get("y")<59){
+                        window.pointModel.set("y", window.pointModel.get("y")+1);
+                    }
                     break;
             }
         });

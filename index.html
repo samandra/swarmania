@@ -15,6 +15,7 @@
 <!--    <link href='http://fonts.googleapis.com/css?family=Chelsea+Market' rel='stylesheet' type='text/css'>-->
 <!--    <link href='http://fonts.googleapis.com/css?family=Handlee' rel='stylesheet' type='text/css'>-->
 <!--        <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>-->
+<<<<<<< HEAD
         
         <script src="/lib/underscore.js"></script>
         <script src="/lib/underscore.string.js"></script>
@@ -28,6 +29,12 @@
             var socket = io.connect('http://diki.swarmsocket.jit.su');
         </script>
         
+=======
+    
+    <link href='http://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'> 
+    <link rel="stylesheet" type="text/css" href="style/normalize.css">
+
+>>>>>>> master
     <style type="text/css">
             * {
                 padding: 0;
@@ -39,10 +46,6 @@
                 font-size: 75%;
             }
             
-            h1 {
-                font-size: 1.4em;
-                padding: 10px 10px 0;
-            }
             
             p{
                 padding: 0 10px 1em;
@@ -82,15 +85,27 @@
   <body>
 
     <div id="container">
-        <h3>Swarmania</h3>
 
+        <h1 style="font-family: 'Press Start 2P', cursive; font-size: 2.5em;">Swarmania</h1>
         <div id="canvasContainer">
             
 
         </div>
     </div>
 
+    <script src="/lib/underscore.js"></script>
+    <script src="/lib/underscore.string.js"></script>
+    <script src="/lib/jquery.js"></script>
+    <script src="/lib/backbone-min.js"></script>
+    <script src="/lib/init.js"></script>
     
+    <script src="http://192.168.1.164:8091/socket.io/socket.io.js"></script>
+    
+    <script type="text/javascript">
+        var socket = io.connect('http://192.168.1.164:8091');
+    </script> 
+
+
     <script src="models/PointModel.js"></script>
     <script src="collections/PointsCollection.js"></script>
 
